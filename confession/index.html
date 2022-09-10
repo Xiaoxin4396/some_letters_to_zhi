@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>写给周老师的第零封信</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
+<body>
+<div id="mainDiv">
+    <div id="content">
+<!--        <audio src="want_to_go_to_seaside.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio>-->
+        <audio autoplay="autoplay" height="100" width="100">
+            <source src="want_to_go_to_seaside.mp3" type="audio/mp3"/>
+            <embed height="100" width="100" src="want_to_go_to_seaside.mp3"/>
+        </audio>
+        <div id="code">
+            <span class="comments">大王：</span><br/>
+            <span class="space"><span class="comments">这是写给你的，迟到的，第0封信~</span></span><br/>
+            <span class="space"><span class="comments">还记得前些天，我们依偎在沙发上，你问我，“以前有没有想象过会有这个场景？”我说，“当然想象过呀~”当时你嗤之以鼻。其实，从22年5月27日开始，我就会想象这些场景，因为那是我喜欢你的第一天。</span></span><br/>
+            <span class="space"><span class="comments">说来还真是奇妙，5月4日我们相识于网络，缘自《冰山下的阴影》；5月17日我们打了第一通电话，起因是我的莫名丧；而5月27日，素未谋面，甚至不知道你长啥样，我就这样喜欢上了你。或许，这就是，通过灵魂找到你吧~</span></span><br/>
+            <span class="space"><span class="comments">自9月1号疫情封控以来，我们已经被隔离了好几天啦。还记得隔离的第一天你对我说：“要不你回去吧，我有预感我们肯定会吵架。”好家伙，一语成谶。诚然，过程很难受，不过也正是因此，让我懂得了该怎样去喜欢你。世上本没有完全契合的两个人，希望我们可以一直磨合到世界的尽头。虽说好事多磨，但以后一定要快乐多一点，争吵少一点，往后的日子，还得请大王多多指教啦~</span></span><br/>
+            <span class="space"><span class="comments">还记得以前我“追你”的时候，我和你说得最多的一个词语是，顺其自然，水到渠成。好像没有什么电视里的，或者我想象了很久的那种浪漫桥段，我们自然而然地就在一起了，没有鲜花，也没有告白。截至今天，我给你写了几封信，有记录在文档中的，也有字写得很丑的，有第一、第二...直到第八。但在程序员的世界里，计数的第一个数字不是1，而是0，所以，这迟到的第0封信，在这个教师节与中秋节共庆的特殊日子里，送给你~</span></span><br/>
+            <span class="space"><span
+                    class="comments">周支玲，我喜欢你，我希望且只希望和你度过余下平淡顺遂的一生，做我女朋友吧！不求大富大贵、极尽奢华，只要心安之处、家中你我。</span></span><br/>
+            <span class="space"></span><span class="space"></span><span class="space"></span>
+            <span class="space"></span><span class="space"></span><span class="space"></span>
+            <span class="space"></span><span class="space"></span><span class="space"></span>
+            <span class="space"></span><span class="space"></span><span class="space"></span>
+            <br/><span class="comments">-- 小张</span><br/>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    大王, 这是我喜欢你的第
+                    <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                    请让我继续喜欢下去<br/>
+                    <div class="signature">-- 小张</div>
+                </div>
+            </div>
+        </div>
+        <div class="bg1">
+            <div class="main">
+                <footer style="line-height:20px">
+                    <div id="copyright">
+                        <p></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2022, (5 - 1), 27);
+        together.setHours(10);
+        together.setMinutes(56);
+        together.setSeconds(34);
+        together.setMilliseconds(0);
+
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>" +
+                "<br/>请先升级您的浏览器";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 5000);
+
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+    <audio id="bgmMusic" src="want_to_go_to_seaside.mp3" preload="auto"
+           type="audio/mp3" autoplay loop></audio>
+
+</div>
+</body>
+</html>

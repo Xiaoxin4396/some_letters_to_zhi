@@ -11,13 +11,9 @@
     <script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
     <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
 <body>
+<audio id ="audio" src="want_to_go_to_seaside.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio>
 <div id="mainDiv">
     <div id="content">
-<!--        <audio src="want_to_go_to_seaside.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio>-->
-        <audio autoplay="autoplay" height="100" width="100">
-            <source src="want_to_go_to_seaside.mp3" type="audio/mp3"/>
-            <embed height="100" width="100" src="want_to_go_to_seaside.mp3"/>
-        </audio>
         <div id="code">
             <span class="comments">大王：</span><br/>
             <span class="space"><span class="comments">这是写给你的，迟到的，第0封信~</span></span><br/>
@@ -27,11 +23,12 @@
             <span class="space"><span class="comments">还记得以前我“追你”的时候，我和你说得最多的一个词语是，顺其自然，水到渠成。好像没有什么电视里的，或者我想象了很久的那种浪漫桥段，我们自然而然地就在一起了，没有鲜花，也没有告白。截至今天，我给你写了几封信，有记录在文档中的，也有字写得很丑的，有第一、第二...直到第八。但在程序员的世界里，计数的第一个数字不是1，而是0，所以，这迟到的第0封信，在这个教师节与中秋节共庆的特殊日子里，送给你~</span></span><br/>
             <span class="space"><span
                     class="comments">周支玲，我喜欢你，我希望且只希望和你度过余下平淡顺遂的一生，做我女朋友吧！不求大富大贵、极尽奢华，只要心安之处、家中你我。</span></span><br/>
+            <br/>
             <span class="space"></span><span class="space"></span><span class="space"></span>
             <span class="space"></span><span class="space"></span><span class="space"></span>
             <span class="space"></span><span class="space"></span><span class="space"></span>
             <span class="space"></span><span class="space"></span><span class="space"></span>
-            <br/><span class="comments">-- 小张</span><br/>
+            <span class="comments">-- 小张</span><br/>
         </div>
         <div id="loveHeart">
             <canvas id="garden"></canvas>
@@ -67,6 +64,7 @@
         together.setSeconds(34);
         together.setMilliseconds(0);
 
+
         if (!document.createElement('canvas').getContext) {
             var msg = document.createElement("div");
             msg.id = "errorMsg";
@@ -92,8 +90,8 @@
             $("#code").typewriter();
         }
     </script>
-    <audio id="bgmMusic" src="want_to_go_to_seaside.mp3" preload="auto"
-           type="audio/mp3" autoplay loop></audio>
+<!--    <audio id="bgmMusic" src="want_to_go_to_seaside.mp3" preload="auto"-->
+<!--           type="audio/mp3" autoplay loop></audio>-->
 
 </div>
 </body>
